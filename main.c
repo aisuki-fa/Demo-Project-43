@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "course.h"
 #include "courseResult.h"
+#include "gpa.h"
 
 int main()
 {
@@ -24,6 +25,9 @@ int main()
     {
         viewCourseResult(results[i]);
     }
+
+    double cgpa = calculateGPA(results, n_courses);
+    printf("CGPA: %.2f\n", cgpa);
 
     return 0;
 }
